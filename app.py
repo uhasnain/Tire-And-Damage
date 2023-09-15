@@ -28,7 +28,7 @@ st.sidebar.image("logo-normal.png")
 st.sidebar.header("Model Configurations")
 # Model Options
 model_type = st.sidebar.radio(
-    "Task Type:", ['Segmentation','Detection])
+    "Task Type:", ['Segmentation','Detection'])
 
 confidence = float(st.sidebar.slider(
     "Select Model Confidence", 25, 100, 40)) / 100
