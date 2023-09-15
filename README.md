@@ -1,1 +1,2 @@
-# defect-detection-streamlit
+# Vehicle Tire Defect and Body Damage Detection System
+
