@@ -93,6 +93,7 @@ if source_radio == settings.IMAGE:
                     with st.expander("Detection Results"):
                         for box in boxes:
                             st.write(box.data)
+                            st.warning("Damage Detected!")
                 except Exception as ex:
                     # st.write(ex)
                     st.write("No image is uploaded yet!")
