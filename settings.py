@@ -17,7 +17,7 @@ ROOT = root_path.relative_to(Path.cwd())
 # Sources
 IMAGE = 'Image'
 # VIDEO = 'Video'
-# WEBCAM = 'Webcam'
+WEBCAM = 'Webcam'
 # RTSP = 'RTSP'
 # YOUTUBE = 'YouTube'
 
