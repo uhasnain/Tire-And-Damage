@@ -25,8 +25,6 @@ st.markdown('''**NOTE: This model is not to be used to detect tire damage presen
 st.sidebar.image("logo-normal.png")
 
 
-# Sidebar
-st.sidebar.header("Model Configurations")
 # Model Options
 #model_type = st.sidebar.radio(
     #"Task Type:", ['Segmentation'])
