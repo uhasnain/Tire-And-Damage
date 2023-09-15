@@ -1,1 +1,1 @@
-# Tire-And-Damage
+# defect-detection-streamlit
