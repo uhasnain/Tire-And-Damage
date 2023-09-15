@@ -80,6 +80,8 @@ if source_radio == settings.IMAGE:
         else:
             if st.sidebar.button('Detect Damage'):
                 res = model.predict(uploaded_image, conf=confidence)
+                if res is None:
+                    st.write("No error!")
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
                 st.image(res_plotted, caption='Detected Image',use_column_width=True)
@@ -89,8 +91,7 @@ if source_radio == settings.IMAGE:
                         for box in boxes:
                             st.write("Damage Detected!")
                             st.write(box.data)
-                            if(box.data) is None:
-                                st.write("No error!")
+                            
                 except Exception as ex:
                     # st.write(ex)
                     st.write("No image is uploaded yet!")
