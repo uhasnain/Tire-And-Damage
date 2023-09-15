@@ -29,7 +29,7 @@ st.sidebar.image("logo-normal.png")
 #model_type = st.sidebar.radio(
     #"Task Type:", ['Segmentation'])
 
-confidence = 40
+confidence = 0.4
 
 # # Selecting Detection Or Segmentation
 # if model_type == 'Detection':
