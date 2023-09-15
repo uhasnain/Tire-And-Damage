@@ -37,7 +37,7 @@ confidence = float(st.sidebar.slider(
 if model_type == 'Detection':
     model_path = Path(settings.DETECTION_MODEL)
 if model_type == 'Segmentation':
-model_path = Path(settings.SEGMENTATION_MODEL)
+    model_path = Path(settings.SEGMENTATION_MODEL)
 
 # Load Pre-trained ML Model
 try:
