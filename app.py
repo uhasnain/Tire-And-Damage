@@ -91,7 +91,10 @@ if source_radio == settings.IMAGE:
                          use_column_width=True)
                 try:
                     with st.expander("Detection Results"):
-                        st.write("Damage Detected!")
+                        for box in boxes:
+                            st.write("Damage Detected!")
+                            st.write(box.data)
+                            
                 except Exception as ex:
                     # st.write(ex)
                     st.write("No image is uploaded yet!")
