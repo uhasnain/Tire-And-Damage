@@ -19,7 +19,7 @@ st.set_page_config(
 
 # Main page heading
 st.title("Tire Defect and Damage Segmentation")
-st.markdown('''**Note: This model is not to be used to detect tire damage presence but only for finding and displaying the area of damage**''')
+st.markdown('''**NOTE: This model is not to be used to detect tire damage presence but only for finding and displaying the area of damage**''')
 
 #Logo
 st.sidebar.image("logo-normal.png")
