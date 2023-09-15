@@ -36,6 +36,7 @@ confidence = float(st.sidebar.slider(
 # # Selecting Detection Or Segmentation
 if model_type == 'Detection':
     model_path = Path(settings.DETECTION_MODEL)
+    
 if model_type == 'Segmentation':
     model_path = Path(settings.SEGMENTATION_MODEL)
 
@@ -80,8 +81,6 @@ if source_radio == settings.IMAGE:
         else:
             if st.sidebar.button('Detect Damage'):
                 res = model.predict(uploaded_image, conf=confidence)
-                if res is None:
-                    st.write("No error!")
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
                 st.image(res_plotted, caption='Detected Image',use_column_width=True)
