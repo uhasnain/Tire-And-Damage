@@ -27,16 +27,16 @@ st.sidebar.image("logo-normal.png")
 # Sidebar
 st.sidebar.header("Model Configurations")
 # Model Options
-#model_type = st.sidebar.radio(
-    #"Task Type:", ['Segmentation'])
+model_type = st.sidebar.radio(
+    "Task Type:", ['Segmentation','Detection])
 
 confidence = float(st.sidebar.slider(
     "Select Model Confidence", 25, 100, 40)) / 100
 
 # # Selecting Detection Or Segmentation
-# if model_type == 'Detection':
-#     model_path = Path(settings.DETECTION_MODEL)
-#if model_type == 'Segmentation':
+if model_type == 'Detection':
+    model_path = Path(settings.DETECTION_MODEL)
+if model_type == 'Segmentation':
 model_path = Path(settings.SEGMENTATION_MODEL)
 
 # Load Pre-trained ML Model
@@ -63,12 +63,10 @@ if source_radio == settings.IMAGE:
             if source_img is None:
                 default_image_path = str(settings.DEFAULT_IMAGE)
                 default_image = PIL.Image.open(default_image_path)
-                st.image(default_image_path, caption="Default Image",
-                         use_column_width=True)
+                st.image(default_image_path, caption="Default Image", use_column_width=True)
             else:
                 uploaded_image = PIL.Image.open(source_img)
-                st.image(source_img, caption="Uploaded Image",
-                         use_column_width=True)
+                st.image(source_img, caption="Uploaded Image", use_column_width=True)
         except Exception as ex:
             st.error("Error occurred while opening the image.")
             st.error(ex)
@@ -77,7 +75,7 @@ if source_radio == settings.IMAGE:
         if source_img is None:
             default_detected_image_path = str(settings.DEFAULT_DETECT_IMAGE)
             default_detected_image = PIL.Image.open(default_detected_image_path)
-            st.image(default_detected_image_path, caption='Detected Image : No damage',use_column_width=True)
+            st.image(default_detected_image_path, caption='Detected Image',use_column_width=True)
             
         else:
             if st.sidebar.button('Detect Damage'):
