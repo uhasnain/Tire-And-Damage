@@ -11,7 +11,7 @@ import helper
 
 # Setting page layout
 st.set_page_config(
-    page_title="Car Defect Detection",
+    page_title="Tire Damage Segmentation",
     page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded"
