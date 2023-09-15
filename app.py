@@ -19,11 +19,10 @@ st.set_page_config(
 
 # Main page heading
 st.title("Tire Defect and Damage Segmentation")
-st.write("This application is solely built for the purpose of pin-pointing error in the image and find the damaged area.")
-st.markdown('''**Note: This model is not to be used to detect tire damage presence but only for finding and displaying the area of damage**''')
+st.markdown('''This application is solely built for the purpose of pin-pointing error in the image and find the damaged area. **Note: This model is not to be used to detect tire damage presence but only for finding and displaying the area of damage**''')
 
 #Logo
-#st.sidebar.image("logo-normal.png")
+st.sidebar.image("logo-normal.png")
 
 
 # Sidebar
