@@ -93,6 +93,7 @@ if source_radio == settings.IMAGE:
                 try:
                     with st.expander("Detection Results"):
                         for box in boxes:
+                            st.write('The array of detected pixels')
                             st.write(box.data)
                 except Exception as ex:
                     # st.write(ex)
