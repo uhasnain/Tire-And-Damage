@@ -91,7 +91,8 @@ if source_radio == settings.IMAGE:
                         for box in boxes:
                             st.write("Damage Detected!")
                             st.write(box.data)
-                
+                else:
+                    st.write("No error")
                 
                 except Exception as ex:
                     st.write(ex)
