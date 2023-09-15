@@ -83,6 +83,8 @@ if source_radio == settings.IMAGE:
                 st.sidebar.success("Accuracy : 99%")
                 res = model.predict(uploaded_image, conf=confidence)
                 boxes = res[0].boxes
+                if boxes is None:
+                    st.write("No damage")
                 res_plotted = res[0].plot()[:, :, ::-1]
                 st.image(res_plotted, caption='Detected Image',use_column_width=True)
             
