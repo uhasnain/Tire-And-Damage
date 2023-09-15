@@ -83,7 +83,7 @@ if source_radio == settings.IMAGE:
                 res = model.predict(uploaded_image, conf=confidence)
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
-                st.image(res_plotted, caption='Detected Image',use_column_width=True)
+                st.image(res_plotted, caption='Detected Image : No Damage',use_column_width=True)
             
                 try:
                     with st.expander("Detection Results"):
