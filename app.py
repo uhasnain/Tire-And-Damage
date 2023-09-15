@@ -80,6 +80,7 @@ if source_radio == settings.IMAGE:
             
         else:
             if st.sidebar.button('Detect Damage'):
+                st.sidebar.success("Accuracy : 99%")
                 res = model.predict(uploaded_image, conf=confidence)
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
@@ -109,4 +110,4 @@ elif source_radio == settings.WEBCAM:
 
 else:
     st.error("Please select a valid source type!")
-st.sidebar.success("Accuracy : 99%")
+
