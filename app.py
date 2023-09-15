@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 # Main page heading
-st.title("Tire Defect and Damage Detection")
+st.title("Tire Defect and Damage Segmentation")
 
 #Logo
 st.sidebar.image("logo-normal.png")
@@ -26,19 +26,8 @@ st.sidebar.image("logo-normal.png")
 
 # Sidebar
 st.sidebar.header("Model Configurations")
-# Model Options
-model_type = st.sidebar.radio(
-    "Task Type:", ['Segmentation','Detection'])
-
-confidence = float(st.sidebar.slider(
-    "Select Model Confidence", 25, 100, 40)) / 100
-
-# # Selecting Detection Or Segmentation
-if model_type == 'Detection':
-    model_path = Path(settings.DETECTION_MODEL)
-    
-if model_type == 'Segmentation':
-    model_path = Path(settings.SEGMENTATION_MODEL)
+  
+model_path = Path(settings.SEGMENTATION_MODEL)
 
 # Load Pre-trained ML Model
 try:
@@ -89,7 +78,7 @@ if source_radio == settings.IMAGE:
                 try:
                     with st.expander("Detection Results"):
                         for box in boxes:
-                            st.write("Damage Detected!")
+                            
                             st.write(box.data)
                              
                 except Exception as ex:
