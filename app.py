@@ -20,7 +20,7 @@ st.set_page_config(
 # Main page heading
 st.title("Tire Defect and Damage Detection")
 
-Logo
+#Logo
 st.sidebar.image("logo-normal.png")
 
 
