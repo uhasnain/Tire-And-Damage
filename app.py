@@ -91,9 +91,7 @@ if source_radio == settings.IMAGE:
                         for box in boxes:
                             st.write("Damage Detected!")
                             st.write(box.data)
-                except:
-                    st.write("No error")
-                
+                             
                 except Exception as ex:
                     st.write(ex)
                     st.write("No image is uploaded yet!")
