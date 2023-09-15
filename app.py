@@ -76,10 +76,9 @@ if source_radio == settings.IMAGE:
     with col2:
         if source_img is None:
             default_detected_image_path = str(settings.DEFAULT_DETECT_IMAGE)
-            default_detected_image = PIL.Image.open(
-                default_detected_image_path)
-            st.image(default_detected_image_path, caption='Detected Image',use_column_width=True)
-            st.write("No damage found!")
+            default_detected_image = PIL.Image.open(default_detected_image_path)
+            st.image(default_detected_image_path, caption='Detected Image : No damage found',use_column_width=True)
+            
         else:
             if st.sidebar.button('Detect Damage'):
                 res = model.predict(uploaded_image, conf=confidence)
