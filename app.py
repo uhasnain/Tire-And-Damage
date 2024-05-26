@@ -11,18 +11,18 @@ import helper
 
 # Setting page layout
 st.set_page_config(
-    page_title="Tire Damage Segmentation",
+    page_title="Christo Segmentation",
     page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Main page heading
-st.title("Tire Defect and Damage Segmentation")
-st.markdown('''**NOTE: This model is not to be used to detect tire damage presence but only for finding and displaying the area of damage**''')
+st.title("Tree Defect and Damage Segmentation")
+st.markdown('''**NOTE: This model is not to be used to detect tree damage presence but only for finding and displaying the area of damage**''')
 
 #Logo
-st.sidebar.image("logo-normal.png")
+#st.sidebar.image("logo-normal.png")
 
 
 # Model Options
