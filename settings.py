@@ -46,7 +46,7 @@ VIDEOS_DICT = {
 # ML Model config
 MODEL_DIR = ROOT / 'weights'
 DETECTION_MODEL = MODEL_DIR / 'yolov8n.pt'
-SEGMENTATION_MODEL = MODEL_DIR / 'best.pt'
+SEGMENTATION_MODEL = MODEL_DIR / 'last.pt'
 
 # Webcam
 WEBCAM_PATH = 0
