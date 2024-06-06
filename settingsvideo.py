@@ -29,7 +29,7 @@ DEFAULT_IMAGE = IMAGES_DIR / 'Copy of DJI_0667.JPG'
 DEFAULT_DETECT_IMAGE = IMAGES_DIR / 'Untitled.png'
 
 # Videos config
-VIDEO_DIR = ROOT / 'videos'
+VIDEO_DIR = ROOT / 'images'
 VIDEO_1_PATH = VIDEO_DIR / 'video_1.mp4'
 VIDEO_2_PATH = VIDEO_DIR / 'video_2.mp4'
 VIDEO_3_PATH = VIDEO_DIR / 'video_3.mp4'
