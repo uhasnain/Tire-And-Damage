@@ -3,3 +3,5 @@ Pillow
 streamlit
 opencv-python
 ultralytics
+folium
+streamlit-folium
